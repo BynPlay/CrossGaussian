@@ -4,9 +4,8 @@
 
   <img src="ReadMe/Introduce.gif" width="50%" />
 
-> *"Step into their space, from anywhere." "어디서든, 그 공간 안으로 들어가세요. 🌍🔮"*  
-> *3D Gaussian Splatting meets 360° streaming for room-scale remote collaboration.*  
-> *3D 가우시안 스플래팅과 360° 스트리밍이 만나 룸스케일 원격 협업을 실현합니다.*
+> Exploring the design space of 3DGS-based spatial visualization and interaction for remote collaboration  
+> User study: Reconstruction latency × 18 participants, Friedman + Wilcoxon analysis
 
 </div>
 
