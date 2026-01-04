@@ -171,7 +171,7 @@ In co-located collaboration, users freely move through physical spaces, but **re
 ## 🎨 Design Space
 
 <div align="center">
-  <img src="ReadMe/Design1.avif" width="40%" />
+  <img src="ReadMe/Design1.avif" width="60%" />
 </div>
 
 We explore visualization and interaction techniques leveraging 3DGS's **explicit scene representation** and **precise depth rendering** for remote collaboration.
@@ -195,7 +195,7 @@ We explore visualization and interaction techniques leveraging 3DGS's **explicit
 ### 🔀 Blending of Overlapping Scenes
 | Feature | Preview |
 |:--|:--:|
-| **Seamless Scene Transition**<br><br>Abrupt transitions between 360° streaming and 3DGS can induce motion sickness and disrupt presence. Our system enables simultaneous perception of real-time context (360°) while freely exploring alternative viewpoints (3DGS) through adjustable transparency and color scaling.<br><br>360° 스트리밍과 3DGS 간 급격한 전환은 멀미를 유발하고 현존감을 저하시킬 수 있습니다. 본 시스템은 투명도와 색상 스케일링 조절을 통해 실시간 맥락(360°)을 유지하면서 동시에 자유로운 시점(3DGS)으로 탐색할 수 있게 합니다. | <table><tr><td><img src="ReadMe/Overlap.avif" width="200px" /></td><td><img src="ReadMe/Overlap2.avif" width="200px" /></td></tr></table> |
+| **Seamless Scene Transition**<br><br>Abrupt transitions between 360° streaming and 3DGS can induce motion sickness and disrupt presence. Our system enables simultaneous perception of real-time context (360°) while freely exploring alternative viewpoints (3DGS) through adjustable transparency and color scaling.<br><br>360° 스트리밍과 3DGS 간 급격한 전환은 멀미를 유발하고 현존감을 저하시킬 수 있습니다. 본 시스템은 투명도와 색상 스케일링 조절을 통해 실시간 맥락(360°)을 유지하면서 동시에 자유로운 시점(3DGS)으로 탐색할 수 있게 합니다. | <table><tr><td><img src="ReadMe/Overlap.avif" width="150px" /></td><td><img src="ReadMe/Overlap2.avif" width="150px" /></td></tr></table> |
 
 ### 👁️ Occlusion-Aware Exploration
 We leverage 3DGS depth information for two key features:
