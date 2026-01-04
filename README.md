@@ -1,8 +1,18 @@
 <div align="center">
 
 # 🌐 CrossGaussian
-
-  <img src="ReadMe/PosterDesign.jpg" width="50%" />
+<table>
+  <tr>
+    <td width="50%">
+      <img src="ReadMe/PosterDesign.jpg" width="100%" />
+    </td>
+    <td width="50%">
+      <a href="https://www.youtube.com/watch?v=j1E37wnWhfA&t=1s">
+        <img src="https://img.youtube.com/vi/j1E37wnWhfA/maxresdefault.jpg" width="100%" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 > Exploring the design space of 3DGS-based spatial visualization and interaction for remote collaboration  
 > User study: Reconstruction latency × 18 participants, Friedman + Wilcoxon analysis
