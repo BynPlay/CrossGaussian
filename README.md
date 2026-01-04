@@ -273,13 +273,13 @@ Jaehyun Byun, Byunghoon Kang, Yonghyun Gwon, Hongsong Choi, Yunseo Do, Eunho Kim
 
 <br>
 
-## 📚 References
+## 📚 Implementation References
 
-1. Kerbl et al. 3D Gaussian Splatting for Real-Time Radiance Field Rendering. ACM TOG 2023
-2. Sakashita et al. SharedNeRF: Leveraging Photorealistic and View Dependent Rendering for Real-time and Remote Collaboration. ACM CHI 2024
-3. Huang et al. VirtualNexus: Enhancing 360-Degree Video AR/VR Collaboration with Environment Cutouts and Virtual Replicas. ACM UIST 2024
-4. Gruenefeld et al. VRception: Rapid Prototyping of Cross-Reality Systems in Virtual Reality. ACM CHI 2022
-5. Teo et al. Mixed reality remote collaboration combining 360 video and 3D reconstruction. ACM CHI 2019
+| Reference | Usage |
+|:--|:--|
+| [UnityGaussianSplatting](https://github.com/aras-p/UnityGaussianSplatting) | Unity-based 3DGS rendering pipeline |
+| [Lit Splat (Andrew K. Chan)](https://andrewkchan.dev/posts/lit-splat.html) | Per-pixel depth and pseudo-normal computation for shadow casting |
+| [VR Telepresence (Huang et al., TVCG 2023)](https://doi.org/10.1109/TVCG.2023.3320255) | 360° video streaming architecture |
 
 ---
 
