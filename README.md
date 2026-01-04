@@ -7,9 +7,10 @@
       <img src="ReadMe/PosterDesign.jpg" width="100%" />
     </td>
     <td width="50%">
-      <a href="https://www.youtube.com/watch?v=j1E37wnWhfA&t=1s">
-        <img src="https://img.youtube.com/vi/j1E37wnWhfA/maxresdefault.jpg" width="100%" />
-      </a>
+<a href="https://www.youtube.com/watch?v=j1E37wnWhfA&t=1s">
+  <img src="https://img.youtube.com/vi/j1E37wnWhfA/maxresdefault.jpg" width="100%" alt="Demo Video" />
+  <p align="center">🎬 Demo Video</p>
+</a>
     </td>
   </tr>
 </table>
@@ -25,7 +26,7 @@
 
 <br>
 
-🔮 CrossGaussian은 **룸스케일 3D 가우시안 스플래팅(3DGS)과 실시간 360° 비디오 스트리밍을 원격 협업에 최초로 통합한 연구**입니다. 360° 카메라는 넓은 시야각을 제공하지만 깊이 정보가 없어 자유로운 공간 탐색이 제한되고, 수동 3D 모델링은 자유 탐색을 가능케 하지만 제작 비용이 막대합니다. CrossGaussian은 3DGS의 명시적 장면 표현과 실시간 렌더링 특성을 게임 엔진에 통합하여, **원격 협업 환경에서의 공간 시각화 및 상호작용 디자인 스페이스를 탐구**합니다.
+🔮 CrossGaussian은 **뉴럴 렌더링 기법인 3D 가우시안 스플래팅(3DGS)과 실시간 360° 비디오 스트리밍을 룸스케일 원격 협업에 최초로 통합한 연구**입니다. 360° 카메라는 넓은 시야각을 제공하지만 깊이 정보가 없어 자유로운 공간 탐색이 제한되고, 수동 3D 모델링은 자유 탐색을 가능케 하지만 제작 비용이 막대합니다. CrossGaussian은 3DGS의 명시적 장면 표현과 실시간 렌더링 특성을 게임 엔진에 통합하여, **원격 협업 환경에서의 공간 시각화 및 상호작용 디자인 스페이스를 탐구**합니다.
 
 ---
 
@@ -125,7 +126,7 @@ In co-located collaboration, users freely move through physical spaces, but **re
 ### 🔧 Automated End-to-End Pipeline
 
 <div align="center">
-  <img src="ReadMe/Architecture.avif" width="50%" />
+  <img src="ReadMe/Architecture.avif" width="70%" />
 </div>
 
 ```
