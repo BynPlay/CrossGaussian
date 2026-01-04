@@ -25,7 +25,7 @@
 
 <br>
 
-🔮 CrossGaussian은 룸스케일 3D 가우시안 스플래팅(3DGS)과 실시간 360° 비디오 스트리밍을 원격 협업에 최초로 통합한 연구입니다. 360° 카메라는 넓은 시야각을 제공하지만 깊이 정보가 없어 자유로운 공간 탐색이 제한되고, 수동 3D 모델링은 자유 탐색을 가능케 하지만 제작 비용이 막대합니다. CrossGaussian은 3DGS의 명시적 장면 표현과 실시간 렌더링 특성을 게임 엔진에 통합하여, 원격 협업 환경에서의 공간 시각화 및 상호작용 디자인 스페이스를 탐구합니다.
+🔮 CrossGaussian은 **룸스케일 3D 가우시안 스플래팅(3DGS)과 실시간 360° 비디오 스트리밍을 원격 협업에 최초로 통합한 연구**입니다. 360° 카메라는 넓은 시야각을 제공하지만 깊이 정보가 없어 자유로운 공간 탐색이 제한되고, 수동 3D 모델링은 자유 탐색을 가능케 하지만 제작 비용이 막대합니다. CrossGaussian은 3DGS의 명시적 장면 표현과 실시간 렌더링 특성을 게임 엔진에 통합하여, **원격 협업 환경에서의 공간 시각화 및 상호작용 디자인 스페이스를 탐구**합니다.
 
 ---
 
@@ -55,7 +55,7 @@
 **Duration**: 2024.09 ~ 2025.10  
 **Advisors**: Seungjae Oh & Sangkeun Park (KHU)
 
-![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-5E5E5E?style=flat-square&logoColor=white) | ![Unity](https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white) ![Meta Quest](https://img.shields.io/badge/Meta_Quest-1C1E20?style=flat-square&logo=meta&logoColor=white) | ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white) ![NVIDIA](https://img.shields.io/badge/NVIDIA_NPP-76B900?style=flat-square&logo=nvidia&logoColor=white) | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) ![HLSL](https://img.shields.io/badge/HLSL-5E5E5E?style=flat-square&logoColor=white) | ![Unity](https://img.shields.io/badge/Unity-000000?style=flat-square&logo=unity&logoColor=white) ![Photon](https://img.shields.io/badge/Photon-004480?style=flat-square&logo=photon&logoColor=white) ![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white) ![Meta Quest](https://img.shields.io/badge/Meta_Quest-1C1E20?style=flat-square&logo=meta&logoColor=white) | ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white) ![NVIDIA](https://img.shields.io/badge/NVIDIA_NPP-76B900?style=flat-square&logo=nvidia&logoColor=white) | ![Azure DevOps](https://img.shields.io/badge/Azure_DevOps-0078D7?style=flat-square&logo=azuredevops&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
 
 <br>
 
@@ -63,7 +63,7 @@
 
 | Position | Role | Name | Affiliation |
 |:--|:--|:--|:--|
-| 🎯 Research | First Author<br>Research Design & System Architecture | [Jaehyun Byun](https://github.com/BynPlay) | Kyung Hee Univ.<br>Computer Science |
+| 🎯 Research | First Author<br>Research Lead & System Architecture | [Jaehyun Byun](https://github.com/BynPlay) | Kyung Hee Univ.<br>Computer Science |
 | 💻 Dev | Co-Author<br>TCP Streaming & Network Protocol | [Byunghoon Kang](https://github.com/dot-mario) | Kyung Hee Univ.<br>Software Convergence |
 | 💻 Dev | Co-Author<br>3DGS Rendering & Compute Shader | [Yonghyun Gwon](https://github.com/Noperi0r) | Kyung Hee Univ.<br>Software Convergence |
 | 💻 Dev | Co-Author<br>Remote GPU Pipeline | Hongsong Choi | Kyung Hee Univ.<br>Computer Science |
@@ -97,9 +97,15 @@ In co-located collaboration, users freely move through physical spaces, but **re
 
 ### 💡 Our Approach: 3D Gaussian Splatting
 
+<div align="center">
+<img src="ReadMe/Figure1.avif" width="50%" />
+</div>
+
 3D Gaussian Splatting (3DGS) represents scenes as explicit 3D Gaussians with position, color, and alpha values—enabling **fast training, real-time rendering, and direct manipulation** unlike implicit NeRF representations.
 
 3D 가우시안 스플래팅(3DGS)은 장면을 위치, 색상, 알파 값을 가진 명시적 3D 가우시안으로 표현하여, 암묵적 NeRF 표현과 달리 **빠른 학습, 실시간 렌더링, 직접 조작**이 가능합니다.
+
+<div align="center">
 
 | Property | Benefit for Remote Collaboration |
 |:--|:--|
@@ -107,6 +113,8 @@ In co-located collaboration, users freely move through physical spaces, but **re
 | **Fast Training** | Minutes instead of hours for room-scale reconstruction<br>룸스케일 재구성이 시간 단위에서 분 단위로 |
 | **Real-time Rendering** | GPU-accelerated splatting for responsive exploration<br>반응적 탐색을 위한 GPU 가속 스플래팅 |
 | **Alpha Blending** | Natural semi-transparent rendering for see-through effects<br>투시 효과를 위한 자연스러운 반투명 렌더링 |
+
+</div>
 
 ---
 
@@ -117,7 +125,7 @@ In co-located collaboration, users freely move through physical spaces, but **re
 ### 🔧 Automated End-to-End Pipeline
 
 <div align="center">
-  <img src="ReadMe/Pipeline.png" width="80%" />
+  <img src="ReadMe/Architecture.avif" width="50%" />
 </div>
 
 ```
