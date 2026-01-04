@@ -211,6 +211,8 @@ We leverage 3DGS depth information for two key features:
 
 ## 🔬 User Study
 
+<div align="center">
+
 ### 📋 Study Design: Reconstruction Latency & User Perception
 
 Even state-of-the-art 3D reconstruction exceeds real-time thresholds (33ms), yet prior work rarely examines how delays affect user perception. We investigated **how reconstruction latency impacts perceived manipulability and trust in object existence**.
@@ -238,10 +240,11 @@ Non-parametric analysis (Friedman test + Wilcoxon signed-rank with Bonferroni co
 ### 💬 Qualitative Findings
 
 > *"After 10 seconds, I started losing trust in whether the object was really there."*
-
 > *"At 60 seconds, it felt disconnected from reality—I didn't want to interact with it anymore."*
 
 Most participants began losing trust after **10 seconds**, with **60-second delays** making objects feel disconnected and significantly reducing willingness to interact.
+
+</div>
 
 ---
 
