@@ -2,7 +2,7 @@
 
 # 🌐 CrossGaussian
 
-  <img src="ReadMe/Introduce.gif" width="50%" />
+  <img src="ReadMe/PosterDesign.jpg" width="50%" />
 
 > Exploring the design space of 3DGS-based spatial visualization and interaction for remote collaboration  
 > User study: Reconstruction latency × 18 participants, Friedman + Wilcoxon analysis
