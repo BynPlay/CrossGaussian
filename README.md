@@ -67,9 +67,9 @@
 | 🎯 Research | First Author<br>Research Lead & System Architecture | [Jaehyun Byun](https://github.com/BynPlay) | Kyung Hee Univ.<br>Computer Science |
 | 💻 Dev | Co-Author<br>TCP Streaming & Network Protocol | [Byunghoon Kang](https://github.com/dot-mario) | Kyung Hee Univ.<br>Software Convergence |
 | 💻 Dev | Co-Author<br>3DGS Rendering & Compute Shader | [Yonghyun Gwon](https://github.com/Noperi0r) | Kyung Hee Univ.<br>Software Convergence |
-| 💻 Dev | Co-Author<br>Remote GPU Pipeline | Hongsong Choi | Kyung Hee Univ.<br>Computer Science |
-| 📊 Research | Co-Author<br>User Study & Data Analysis | Yunseo Do | Kyung Hee Univ.<br>Computer Science |
-| 📊 Research | Co-Author<br>User Study & Data Analysis | Eunho Kim | Kyung Hee Univ.<br>Computer Science |
+| 💻 Dev | Co-Author<br>Remote GPU Pipeline | Hongsong Choi | Kyung Hee Univ.<br>Software Convergence |
+| 📊 Research | Co-Author<br>Experiment Assistant | Yunseo Do | Kyung Hee Univ.<br> Artificial Intelligence |
+| 📊 Research | Co-Author<br>User Study & Data Analysis | Eunho Kim | Kyung Hee Univ.<br>Software Convergence |
 | 🎓 Advisor | Academic Advisor | [Sangkeun Park](https://uxc.khu.ac.kr/) | Kyung Hee Univ.<br>UXC Lab |
 | 🎓 Advisor | Academic Advisor | [Seungjae Oh](https://item.khu.ac.kr/) | Kyung Hee Univ.<br>ITEM Lab |
 
@@ -83,11 +83,19 @@
 
 ### 📖 Problem Statement
 
+<div align="center">
+<img src="ReadMe/Background.avif" width="60%" />
+</div>
+
+<br>
+
 In co-located collaboration, users freely move through physical spaces, but **remote collaboration severely constrains this autonomy**. When remote participants want to examine objects behind the camera or change viewpoints, they must rely on local collaborators—increasing communication burden and limiting meaningful interaction.
 
 동일 공간 협업에서는 물리적 공간을 자유롭게 이동할 수 있지만, **원격 협업에서는 이러한 자율성이 크게 제한**됩니다. 원격 참여자가 카메라 뒤 물체를 살펴보거나 시점을 변경하려면 현장 협업자에게 의존해야 하며, 이는 의사소통 부담을 증가시키고 의미 있는 상호작용을 제한합니다.
 
-### 🔍 Prior Work & Limitations
+<div align="center">
+
+### Prior Work & Limitations
 
 | Approach | Limitation |
 |:--|:--|
@@ -96,10 +104,14 @@ In co-located collaboration, users freely move through physical spaces, but **re
 | **Photogrammetry** | SfM-based surface meshes with limited resolution and responsiveness<br>SfM 기반 표면 메쉬로 해상도와 반응성 제한 |
 | **NeRF** | High-fidelity but computationally expensive for large environments<br>고품질이지만 대규모 환경에서 계산량 과다 |
 
+</div>
+
+<br>
+
 ### 💡 Our Approach: 3D Gaussian Splatting
 
 <div align="center">
-<img src="ReadMe/Figure1.avif" width="50%" />
+<img src="ReadMe/Figure1.avif" width="60%" />
 </div>
 
 3D Gaussian Splatting (3DGS) represents scenes as explicit 3D Gaussians with position, color, and alpha values—enabling **fast training, real-time rendering, and direct manipulation** unlike implicit NeRF representations.
@@ -112,8 +124,8 @@ In co-located collaboration, users freely move through physical spaces, but **re
 |:--|:--|
 | **Explicit Representation** | Direct access to depth, position, opacity for interaction<br>상호작용을 위한 깊이, 위치, 투명도 직접 접근 |
 | **Fast Training** | Minutes instead of hours for room-scale reconstruction<br>룸스케일 재구성이 시간 단위에서 분 단위로 |
-| **Real-time Rendering** | GPU-accelerated splatting for responsive exploration<br>반응적 탐색을 위한 GPU 가속 스플래팅 |
-| **Alpha Blending** | Natural semi-transparent rendering for see-through effects<br>투시 효과를 위한 자연스러운 반투명 렌더링 |
+| **View-Dependent Visibility** | Per-pixel depth estimation enables occlusion detection from camera perspective<br>픽셀별 깊이 추정으로 카메라 시점 기준 차폐 영역 감지 가능 |
+| **Alpha Blending** | Gaussian alpha values enable natural see-through exploration without mesh limitations<br>메쉬 제약 없이 가우시안 알파 값으로 자연스러운 투시 탐색 가능 |
 
 </div>
 
@@ -126,8 +138,8 @@ In co-located collaboration, users freely move through physical spaces, but **re
 ### 🔧 Automated End-to-End Pipeline
 
 <div align="center">
-  <img src="ReadMe/Architecture.avif" width="70%" />
-</div>
+  <img src="ReadMe/Architecture.avif" width="40%" />
+   <img src="ReadMe/space.gif" width="40%" />
 
 ```
 ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
@@ -135,28 +147,33 @@ In co-located collaboration, users freely move through physical spaces, but **re
 │    Insta360      │    │   Remote GPU     │    │   TCP + FFmpeg   │    │  Unity + Shader  │
 ├──────────────────┤    ├──────────────────┤    ├──────────────────┤    ├──────────────────┤
 │ • 360° Dual      │    │ • SSH/SFTP via   │    │ • H.264 Chunked  │    │ • h264_cuvid     │
-│   Fisheye        │───→│   Paramiko       │───→│   Transfer       │───→│   GPU Decode     │
+│   Fisheye Input  │───→│   Paramiko       │───→│   Transfer       │───→│   GPU Decode     │
 │ • H.264 Local    │    │ • SfM + Gaussian │    │ • ACK-based      │    │ • NV12→RGBA      │
 │   Capture        │    │   Optimization   │    │   Reliability    │    │ • Fisheye→Sphere │
-│ • Real-time      │    │ • Auto Download  │    │ • Low Latency    │    │ • 3DGS Composite │
-│   Transmission   │    │   on Complete    │    │   Sync           │    │   Blending       │
+│ • Real-time      │    │ • Automated .ply │    │ • Low Latency    │    │ • 3DGS Alpha     │
+│   Transmission   │    │   Asset Download │    │   Frame Sync     │    │   Compositing    │
 └──────────────────┘    └──────────────────┘    └──────────────────┘    └──────────────────┘
 ```
 
 ### 📡 Module Details
-
 | Module | Implementation |
 |:--|:--|
-| **Data Collection** | Insta360 SDK captures dual fisheye → local folder auto-save → triggers remote pipeline<br>Insta360 SDK 듀얼 피쉬아이 캡처 → 로컬 폴더 자동 저장 → 원격 파이프라인 트리거 |
-| **Reconstruction** | Python Paramiko for SSH/SFTP → Remote GPU runs SfM + Gaussian optimization → Auto-download .ply<br>Python Paramiko SSH/SFTP → 원격 GPU에서 SfM + 가우시안 최적화 → .ply 자동 다운로드 |
-| **Streaming** | TCP chunked transfer with ACK signals → prevents duplication/loss → near real-time delivery<br>ACK 신호 기반 TCP 청크 전송 → 중복/손실 방지 → 준실시간 전달 |
-| **Rendering** | FFmpeg h264_cuvid GPU decode → NVIDIA NPP NV12→RGBA → Fisheye-to-sphere shader → 3DGS composite<br>FFmpeg h264_cuvid GPU 디코딩 → NVIDIA NPP NV12→RGBA → 피쉬아이-구면 셰이더 → 3DGS 합성 |
+| **Data Collection** | Insta360 SDK integration for dual fisheye capture → local folder auto-save → triggers remote pipeline<br>Insta360 SDK 연동 듀얼 피쉬아이 캡처 → 로컬 폴더 자동 저장 → 원격 파이프라인 트리거 |
+| **Reconstruction** | Python Paramiko SSH/SFTP for distributed GPU orchestration → SfM + Gaussian optimization → automated .ply asset retrieval<br>Python Paramiko SSH/SFTP 분산 GPU 오케스트레이션 → SfM + 가우시안 최적화 → .ply 에셋 자동 회수 |
+| **Streaming** | TCP chunked transfer with ACK handshake → packet loss prevention → frame-synchronized near real-time delivery<br>ACK 핸드셰이크 기반 TCP 청크 전송 → 패킷 손실 방지 → 프레임 동기화 준실시간 전달 |
+| **Rendering** | Unity native plugin (.dll) integration → FFmpeg h264_cuvid GPU decode → NVIDIA NPP color space conversion (NV12→RGBA) → HLSL compute shader for fisheye-to-sphere projection → 3DGS alpha blending on render target<br>Unity 네이티브 플러그인 (.dll) 연동 → FFmpeg h264_cuvid GPU 디코딩 → NVIDIA NPP 색공간 변환 (NV12→RGBA) → HLSL 컴퓨트 셰이더 피쉬아이-구면 투영 → 다중 카메라 스태킹으로 렌더 타겟에 3DGS 알파 블렌딩 |
 
 ---
+
+</div>
 
 <br>
 
 ## 🎨 Design Space
+
+<div align="center">
+  <img src="ReadMe/Design1.avif" width="40%" />
+</div>
 
 We explore visualization and interaction techniques leveraging 3DGS's **explicit scene representation** and **precise depth rendering** for remote collaboration.
 
@@ -176,32 +193,20 @@ We explore visualization and interaction techniques leveraging 3DGS's **explicit
 
 <br>
 
-<div align="center">
-  <img src="ReadMe/Blending.png" width="45%" />
-  <img src="ReadMe/Occlusion.png" width="45%" />
-</div>
-
 ### 🔀 Blending of Overlapping Scenes
-
-Abrupt transitions between 360° streaming and 3DGS can induce motion sickness and disrupt presence. Our system enables **simultaneous perception of real-time context (360°) while freely exploring alternative viewpoints (3DGS)** through adjustable transparency and color scaling.
-
-360° 스트리밍과 3DGS 간 급격한 전환은 멀미를 유발하고 현존감을 저하시킬 수 있습니다. 본 시스템은 투명도와 색상 스케일링 조절을 통해 **실시간 맥락(360°)을 유지하면서 동시에 자유로운 시점(3DGS)으로 탐색**할 수 있게 합니다.
+| Feature | Preview |
+|:--|:--:|
+| **Seamless Scene Transition**<br><br>Abrupt transitions between 360° streaming and 3DGS can induce motion sickness and disrupt presence. Our system enables simultaneous perception of real-time context (360°) while freely exploring alternative viewpoints (3DGS) through adjustable transparency and color scaling.<br><br>360° 스트리밍과 3DGS 간 급격한 전환은 멀미를 유발하고 현존감을 저하시킬 수 있습니다. 본 시스템은 투명도와 색상 스케일링 조절을 통해 실시간 맥락(360°)을 유지하면서 동시에 자유로운 시점(3DGS)으로 탐색할 수 있게 합니다. | <table><tr><td><img src="ReadMe/Overlap.avif" width="200px" /></td><td><img src="ReadMe/Overlap2.avif" width="200px" /></td></tr></table> |
 
 ### 👁️ Occlusion-Aware Exploration
+We leverage 3DGS depth information for two key features:
 
-360° cameras cannot reveal areas behind structures. We leverage 3DGS depth information to:
+3DGS 깊이 정보를 활용한 두 가지 핵심 기능:
 
-1. **Auto-detect occluded regions** via per-pixel depth and pseudo-normal computation
-2. **Highlight hidden areas** to guide remote users toward explorable zones
-3. **Enable see-through** by manipulating Gaussian alpha values
-
-360° 카메라는 구조물 뒤 영역을 볼 수 없습니다. 3DGS 깊이 정보를 활용하여:
-
-1. 픽셀별 깊이와 의사 법선 계산을 통한 **차폐 영역 자동 감지**
-2. 원격 사용자를 탐색 가능 구역으로 안내하는 **숨겨진 영역 하이라이트**
-3. 가우시안 알파 값 조작을 통한 **투시 기능 활성화**
-
----
+| Feature | Preview |
+|:--|:--:|
+| **1. Occluded Region Detection & Highlight**<br><br>Auto-detect occluded regions via per-pixel depth and pseudo-normal computation. Highlight hidden areas using Unity compute shaders and HLSL shadow casting to guide remote users toward explorable zones.<br><br>픽셀별 깊이와 의사 법선 계산을 통해 차폐 영역을 자동 감지하고, Unity 컴퓨트 셰이더와 HLSL 그림자 캐스팅으로 숨겨진 영역을 하이라이트하여 원격 사용자를 탐색 가능 구역으로 안내합니다. | <img src="ReadMe/Occ1.gif" width="400px" /> |
+| **2. See-Through Exploration**<br><br>Manipulate Gaussian alpha values to enable transparent rendering. Unlike mesh-based photogrammetry, 3DGS allows natural semi-transparency for exploration behind obstacles without complex viewpoint manipulation.<br><br>가우시안 알파 값 조작으로 반투명 렌더링을 활성화합니다. 메쉬 기반 Photogrammetry와 달리 3DGS는 자연스러운 반투명 표현이 가능하여 복잡한 시점 조작 없이 장애물 너머를 탐색할 수 있습니다. | <img src="ReadMe/Occ1.avif" width="400px" /> |
 
 <br>
 
@@ -221,10 +226,6 @@ Even state-of-the-art 3D reconstruction exceeds real-time thresholds (33ms), yet
 | **Participants** | N=18 |
 
 ### 📊 Statistical Results
-
-<div align="center">
-  <img src="ReadMe/Results.png" width="60%" />
-</div>
 
 Non-parametric analysis (Friedman test + Wilcoxon signed-rank with Bonferroni correction):
 
@@ -255,7 +256,7 @@ Most participants began losing trust after **10 seconds**, with **60-second dela
 
 **[CrossGaussian: Enhancing Remote Collaboration through 3D Gaussian Splatting and Real-time 360° Streaming](https://doi.org/10.1145/3746058.3758348)**
 
-*ACM Symposium on User Interface Software and Technology (UIST) 2025*  
+***ACM Symposium on User Interface Software and Technology (UIST)** 2025*  
 *September 28–October 01, 2025 | Busan, Republic of Korea*
 
 Jaehyun Byun, Byunghoon Kang, Yonghyun Gwon, Hongsong Choi, Yunseo Do, Eunho Kim, Sangkeun Park, Seungjae Oh
@@ -265,7 +266,7 @@ Jaehyun Byun, Byunghoon Kang, Yonghyun Gwon, Hongsong Choi, Yunseo Do, Eunho Kim
 ### 🎪 IEEE ISMAR 2025 Demo
 
 **3-Day Live Demonstration**  
-*IEEE International Symposium on Mixed and Augmented Reality 2025*
+*[IEEE International Symposium on Mixed and Augmented Reality 2025](https://www.ieeeismar.net/2025/program/demos/)*
 
 </div>
 
