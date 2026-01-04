@@ -155,7 +155,6 @@ In co-located collaboration, users freely move through physical spaces, but **re
 └──────────────────┘    └──────────────────┘    └──────────────────┘    └──────────────────┘
 ```
 
-### 📡 Module Details
 | Module | Implementation |
 |:--|:--|
 | **Data Collection** | Insta360 SDK integration for dual fisheye capture → local folder auto-save → triggers remote pipeline<br>Insta360 SDK 연동 듀얼 피쉬아이 캡처 → 로컬 폴더 자동 저장 → 원격 파이프라인 트리거 |
