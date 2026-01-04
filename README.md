@@ -180,7 +180,7 @@ We explore visualization and interaction techniques leveraging 3DGS's **explicit
 
 <div align="center">
 
-### 🎛️ Core Design Features
+### Core Design Features
 
 </div>
 
