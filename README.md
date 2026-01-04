@@ -250,6 +250,16 @@ Most participants began losing trust after **10 seconds**, with **60-second dela
 
 <br>
 
+## 📚 Implementation References
+
+- [UnityGaussianSplatting](https://github.com/aras-p/UnityGaussianSplatting) — Unity-based 3DGS rendering pipeline
+- [Lit Splat (Andrew K. Chan)](https://andrewkchan.dev/posts/lit-splat.html) — Per-pixel depth and pseudo-normal computation for shadow casting
+- [VR Telepresence (Huang et al., TVCG 2023)](https://doi.org/10.1109/TVCG.2023.3320255) — 360° video streaming architecture
+
+---
+
+<br>
+
 ## 🏆 Publications
 
 <div align="center">
@@ -275,16 +285,6 @@ Jaehyun Byun, Byunghoon Kang, Yonghyun Gwon, Hongsong Choi, Yunseo Do, Eunho Kim
 ---
 
 <br>
-
-## 📚 Implementation References
-
-| Reference | Usage |
-|:--|:--|
-| [UnityGaussianSplatting](https://github.com/aras-p/UnityGaussianSplatting) | Unity-based 3DGS rendering pipeline |
-| [Lit Splat (Andrew K. Chan)](https://andrewkchan.dev/posts/lit-splat.html) | Per-pixel depth and pseudo-normal computation for shadow casting |
-| [VR Telepresence (Huang et al., TVCG 2023)](https://doi.org/10.1109/TVCG.2023.3320255) | 360° video streaming architecture |
-
----
 
 <div align="center">
 
