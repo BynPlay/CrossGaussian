@@ -11,11 +11,11 @@
 
 <br>
 
-🔮 CrossGaussian is **the first system to integrate room-scale 3D Gaussian Splatting with real-time 360° video streaming for remote collaboration**. While 360° cameras provide wide field-of-view context, they lack depth information for free exploration. While manual 3D modeling enables spatial navigation, it's prohibitively expensive. CrossGaussian bridges this gap—remote users can simultaneously perceive real-time environmental context while freely exploring alternative viewpoints, enabling novel spatial visualization and interaction techniques in shared virtual environments.
+🔮 CrossGaussian is the first study to integrate room-scale 3D Gaussian Splatting (3DGS) with real-time 360° video streaming for remote collaboration. While 360° cameras provide a wide field of view, the lack of depth information limits free spatial exploration; manual 3D modeling enables such exploration but incurs prohibitive production costs. CrossGaussian integrates the explicit scene representation and real-time rendering capabilities of 3DGS into a game engine, exploring the design space of spatial visualization and interaction techniques for remote collaboration environments.
 
 <br>
 
-🔮 CrossGaussian은 **룸스케일 3D 가우시안 스플래팅과 실시간 360° 비디오 스트리밍을 원격 협업에 최초로 통합한 시스템**입니다. 360° 카메라는 넓은 시야각을 제공하지만 깊이 정보가 없어 자유로운 탐색이 어렵고, 수동 3D 모델링은 자유 탐색을 가능하게 하지만 비용이 막대합니다. CrossGaussian은 이 간극을 연결합니다—원격 사용자는 실시간 환경 맥락을 유지하면서 동시에 자유로운 시점으로 공간을 탐색할 수 있어, 공유 가상 환경에서 새로운 공간 시각화 및 상호작용 기법을 가능하게 합니다.
+🔮 CrossGaussian은 룸스케일 3D 가우시안 스플래팅(3DGS)과 실시간 360° 비디오 스트리밍을 원격 협업에 최초로 통합한 연구입니다. 360° 카메라는 넓은 시야각을 제공하지만 깊이 정보가 없어 자유로운 공간 탐색이 제한되고, 수동 3D 모델링은 자유 탐색을 가능케 하지만 제작 비용이 막대합니다. CrossGaussian은 3DGS의 명시적 장면 표현과 실시간 렌더링 특성을 게임 엔진에 통합하여, 원격 협업 환경에서의 공간 시각화 및 상호작용 디자인 스페이스를 탐구합니다.
 
 ---
 
