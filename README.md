@@ -211,13 +211,13 @@ We leverage 3DGS depth information for two key features:
 
 ## 🔬 User Study
 
-<div align="center">
-
 ### 📋 Study Design: Reconstruction Latency & User Perception
 
 Even state-of-the-art 3D reconstruction exceeds real-time thresholds (33ms), yet prior work rarely examines how delays affect user perception. We investigated **how reconstruction latency impacts perceived manipulability and trust in object existence**.
 
 최신 3D 재구성 기술도 실시간 기준(33ms)을 초과하지만, 기존 연구에서는 지연이 사용자 인식에 미치는 영향을 거의 다루지 않았습니다. **재구성 지연이 조작 가능성 인식과 객체 존재 신뢰도에 미치는 영향**을 연구했습니다.
+
+<div align="center">
 
 | Variable | Definition |
 |:--|:--|
