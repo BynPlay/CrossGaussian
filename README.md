@@ -242,13 +242,47 @@ Non-parametric analysis (Friedman test + Wilcoxon signed-rank with Bonferroni co
 > *"After 10 seconds, I started losing trust in whether the object was really there."*
 > *"At 60 seconds, it felt disconnected from reality—I didn't want to interact with it anymore."*
 
-Most participants began losing trust after **10 seconds**, with **60-second delays** making objects feel disconnected and significantly reducing willingness to interact.
+Most participants began losing trust after **10 seconds**, with **60-second delays** making objects feel disconnected and significantly reducing willingness to interact. 
+
+대부분의 참여자는 10초 이후부터 신뢰가 감소하기 시작했으며, 60초의 지연에서는 객체가 분리된 것처럼 느껴져 상호작용 의지가 크게 저하되었습니다.
 
 </div>
 
 ---
 
 <br>
+
+## 🌟 Significance & Conclusion
+
+### 🔑 Key Contributions
+
+- **First room-scale integration of 3DGS and real-time 360° streaming**  
+  Enables free-viewpoint remote exploration without costly manual 3D modeling.  
+  → 원격 협업 상호작용에서 룸스케일 **3DGS + 실시간 360° 스트리밍을 통합한 인터랙션을 탐구**, 수동 모델링 없이 자유 시점 원격 탐색 가능
+
+- **3DGS as an interaction-ready scene representation**  
+  Uses explicit depth and opacity to support spatial interaction beyond visualization.  
+  → 3DGS의 **명시적 깊이·투명도 정보**를 활용한 상호작용 가능한 장면 표현 제시
+
+- **Practical design space for remote collaboration**  
+  Introduces scene blending, occlusion-aware exploration, and see-through views.  
+  → **중첩 장면 블렌딩, 차폐 인지 탐색, 투시 기반 탐색** 디자인 스페이스 제안
+
+- **Empirical evidence on latency as a UX constraint**  
+  User study shows trust and manipulability degrade beyond ~10s reconstruction delay.  
+  → 사용자 실험을 통해 **약 10초 이상 지연 시 신뢰·조작 가능성 급감** 확인
+
+### 🧭 Takeaway
+
+**CrossGaussian shows that neural rendering can function as an interaction design material, not just a reconstruction technique.**  
+Hybrid systems combining live visual context and explicit neural scene representations open new directions for XR-based remote collaboration.
+
+**CrossGaussian은 뉴럴 렌더링을 단순한 재구성 기술이 아닌, 상호작용 설계 재료로 재정의합니다.**  
+실시간 시각적 맥락과 명시적 뉴럴 장면 표현의 결합은 원격 협업의 새로운 가능성을 제시합니다.
+
+---
+
+<BR>
 
 ## 📚 Implementation References
 
