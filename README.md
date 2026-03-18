@@ -52,7 +52,7 @@
 ### 📖 Introduce
 
 **Project**: CrossGaussian  
-**Type**: Academic Research (HCI)  
+**Type**: Academic Research
 **Duration**: 2024.09 ~ 2025.10  
 **Advisors**: Seungjae Oh & Sangkeun Park (KHU)
 
