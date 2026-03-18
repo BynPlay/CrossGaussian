@@ -64,7 +64,7 @@
 
 | Position | Role | Name | Affiliation |
 |:--|:--|:--|:--|
-| 🎯 Research | First Author<br>Research Lead & System Architecture | [Jaehyun Byun](https://github.com/BynPlay) | Kyung Hee Univ.<br>Computer Science |
+| 🎯 Research | Research Lead & Lead Dev | [Jaehyun Byun](https://github.com/BynPlay) | Kyung Hee Univ.<br>Computer Science |
 | 💻 Dev | Co-Author<br>TCP Streaming & Network Protocol | [Byunghoon Kang](https://github.com/dot-mario) | Kyung Hee Univ.<br>Software Convergence |
 | 💻 Dev | Co-Author<br>3DGS Rendering & Compute Shader | [Yonghyun Gwon](https://github.com/Noperi0r) | Kyung Hee Univ.<br>Software Convergence |
 | 💻 Dev | Co-Author<br>Remote GPU Pipeline | Hongsong Choi | Kyung Hee Univ.<br>Software Convergence |
